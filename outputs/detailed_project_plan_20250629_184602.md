@@ -1,1 +1,0 @@
-No detailed project plan data available.
