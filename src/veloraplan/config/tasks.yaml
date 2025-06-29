@@ -1,0 +1,34 @@
+project_planning_task:
+  description: >
+    Create a comprehensive project plan using the project configuration data. Focus on scope validation, 
+    phase planning, risk assessment, resource optimization, and timeline development for {project_type} projects.
+  expected_output: >
+    A comprehensive project plan with validated scope, detailed phases, risk mitigation strategies, 
+    optimized resource allocation, and timeline with milestones.
+  agent: project_planner_agent
+
+technical_estimation_task:
+  description: >
+    Validate and optimize the project plan using technical expertise. Analyze complexity, validate 
+    resource planning, and optimize delivery approach for {project_type} projects.
+  expected_output: >
+    Technical validation report with optimized estimates, resource requirements, risk mitigation 
+    strategies, and technical delivery recommendations.
+  agent: estimation_agent
+
+deliverable_generation_task:
+  description: >
+    Compile project configuration into a professional markdown document including:
+    1. # Project Charter: (executive summary, objectives, scope, timeline, resources, risks, governance)
+    2. Mermaid Gantt chart showing all phases and deliverables
+    3. ## Resource Allocation Plan (detailed table with role assignments)
+    4. ## Prioritization Analysis (sorted by score)
+    5. ## Risk Assessment and Mitigation Plan (comprehensive risk register)
+    6. ## Detailed Project Plan (phase-by-phase breakdown)
+    7. ## Financial Summary (budget tracking)
+    8. ## Stakeholder Communication Plan (communication matrix)
+    Output ONLY the markdown document.
+  expected_output: >
+    A single, comprehensive markdown document with all required sections clearly labeled and 
+    professionally formatted for executive presentation.
+  agent: deliverable_agent

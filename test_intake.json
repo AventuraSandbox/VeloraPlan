@@ -1,0 +1,13 @@
+{
+  "project_id": "PRJ-001",
+  "project_title": "AI-driven Claims Triage System",
+  "objectives": "Reduce manual review time by 50% and improve accuracy by 25%",
+  "type": "AI/ML",
+  "urgency": "High",
+  "sponsor": "SVP of Operations",
+  "business_value": 8,
+  "technical_complexity": 7,
+  "resource_availability": 6,
+  "timeline_pressure": 8,
+  "total_score": 29
+} 
