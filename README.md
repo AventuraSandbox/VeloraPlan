@@ -4,8 +4,8 @@ Welcome to the Veloraplan Crew project, powered by [crewAI](https://crewai.com).
 
 ## 🚀 Cost Optimized
 
-This project has been **optimized for cost efficiency** with OpenAI GPT-3.5:
-- **Expected cost per run**: $0.01 - $0.05
+This project has been **optimized for cost efficiency** with OpenAI GPT-4.1-nano:
+- **Expected cost per run**: $0.03 - $0.10 (typical)
 - **Built-in cost monitoring**: Real-time cost estimation
 - **Optimized parameters**: temperature=0.1, max_tokens=1000
 - **Concise prompts**: Reduced token usage while maintaining quality
@@ -62,8 +62,6 @@ $ crewai run
 
 This command initializes the veloraplan Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
-
 ## Understanding Your Crew
 
 The veloraplan Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
@@ -93,9 +91,11 @@ Make sure you have:
 ## Cost Management
 
 ### Expected Costs
-- **Typical run**: $0.01 - $0.05
+- **Typical run**: $0.03 - $0.10 (with gpt-4.1-nano)
 - **Input tokens**: ~2,000 - 5,000
 - **Output tokens**: ~1,000 - 3,000
+
+> **Note:** GPT-4.1-nano is significantly more cost-effective than previous GPT-4 models, with similar or better performance for most project management and planning tasks.
 
 ### Cost Optimization Tips
 1. **Test first**: Run `python test_openai.py` to verify setup
