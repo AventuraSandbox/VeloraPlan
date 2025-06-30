@@ -1,4 +1,9 @@
 #!/usr/bin/env python
+# Author: Meltem Singh
+# Contact: aventura.sandbox@gmail.com
+#
+# main.py for VeloraPlan - Workday ERP Implementation
+
 import sys
 import warnings
 from datetime import datetime

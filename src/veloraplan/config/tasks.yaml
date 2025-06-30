@@ -1,34 +1,42 @@
 project_planning_task:
   description: >
-    Create a comprehensive project plan using the project configuration data. Focus on scope validation, 
-    phase planning, risk assessment, resource optimization, and timeline development for {project_type} projects.
+    Analyze the project intake form and create a comprehensive project plan for a complex ERP implementation in healthcare, including:
+    1. Detailed scope breakdown with deliverables and phases (ERP modules, integrations, data migration, training, go-live)
+    2. Realistic, continuous task breakdown with durations and dependencies (no gaps between phases)
+    3. Resource requirements and team composition (roles, FTEs, weeks)
+    4. Timeline with milestones and key deliverables
+    5. Risk assessment and mitigation strategies (ERP-specific, regulatory, data, change management)
+    6. Success criteria and governance structure
+    Focus on creating a complete, realistic project plan that can be executed successfully.
   expected_output: >
-    A comprehensive project plan with validated scope, detailed phases, risk mitigation strategies, 
-    optimized resource allocation, and timeline with milestones.
+    A comprehensive JSON object containing detailed project scope, task breakdown with realistic durations (no gaps), resource requirements by role and phase, timeline with milestones, risk assessment, and governance structure. This should be complete enough to serve as the foundation for all project deliverables.
   agent: project_planner_agent
 
 technical_estimation_task:
   description: >
-    Validate and optimize the project plan using technical expertise. Analyze complexity, validate 
-    resource planning, and optimize delivery approach for {project_type} projects.
+    Review the project plan and provide technical validation for a complex ERP implementation, including:
+    1. Technical complexity assessment and effort validation (ERP modules, integrations, data migration)
+    2. Resource allocation optimization and skill requirements
+    3. Risk identification and technical mitigation strategies (ERP, healthcare compliance)
+    4. Timeline validation and technical dependencies (continuous, no gaps)
+    5. Prioritization analysis using the provided framework:
+       - Score (sum of 5 dimensions: Business Fit, Technology Fit, Value/Savings, Business Readiness, Risk; each 1–5)
+       - T-shirt sizing (XS–2XL by score)
+       - Priority (P1–P4 by weighted score and business criticality multiplier)
+    Ensure all estimates are realistic and technically sound.
   expected_output: >
-    Technical validation report with optimized estimates, resource requirements, risk mitigation 
-    strategies, and technical delivery recommendations.
+    A JSON object with validated technical estimates, optimized resource allocation, technical risk assessment, timeline validation (continuous), and prioritization analysis using the provided framework. Include recommendations for technical approach and resource optimization.
   agent: estimation_agent
 
 deliverable_generation_task:
   description: >
-    Compile project configuration into a professional markdown document including:
-    1. # Project Charter: (executive summary, objectives, scope, timeline, resources, risks, governance)
-    2. Mermaid Gantt chart showing all phases and deliverables
-    3. ## Resource Allocation Plan (detailed table with role assignments)
-    4. ## Prioritization Analysis (sorted by score)
-    5. ## Risk Assessment and Mitigation Plan (comprehensive risk register)
-    6. ## Detailed Project Plan (phase-by-phase breakdown)
-    7. ## Financial Summary (budget tracking)
-    8. ## Stakeholder Communication Plan (communication matrix)
-    Output ONLY the markdown document.
+    Compile all project information into comprehensive, executive-ready deliverables for a complex ERP implementation:
+    1. Detailed Project Charter (executive summary, scope, objectives, project plan with phases, timeline, resources, risks, success criteria, governance)
+    2. Mermaid Gantt chart with proper syntax (continuous, no gaps between tasks/phases)
+    3. Resource allocation plan with realistic team composition (roles, FTEs, weeks)
+    4. Prioritization matrix using the provided framework (score, t-shirt size, priority, business criticality)
+    5. Risk assessment and mitigation plan (ERP-specific, regulatory, data, change management)
+    Ensure all deliverables are professional, comprehensive, and ready for executive presentation.
   expected_output: >
-    A single, comprehensive markdown document with all required sections clearly labeled and 
-    professionally formatted for executive presentation.
+    Complete project documentation in markdown format including comprehensive charter, properly formatted continuous Mermaid Gantt chart, realistic resource plan, prioritization analysis (using the provided framework), and risk assessment. All deliverables should be executive-ready and comprehensive enough for project execution and online publication.
   agent: deliverable_agent
